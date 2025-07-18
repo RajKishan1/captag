@@ -5,7 +5,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="bg-[#171717]">
-      <NavigationBar />
+ 
       <HeroSection />
     </div>
   );

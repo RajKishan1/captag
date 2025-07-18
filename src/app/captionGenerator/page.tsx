@@ -1,13 +1,13 @@
 import React from "react";
-import { FileUpload } from "./FileUpload";
+import { FileUpload } from "../../components/imageToCaption/FileUpload";
 import NavigationBar from "@/components/homepage/NavigationBar";
-import Inputs from "./Inputs";
+import Inputs from "../../components/imageToCaption/Inputs";
 import GenerateButtons from "@/components/imageToCaption/GenerateButtons";
 
 const page = () => {
   return (
     <div className="">
-      <NavigationBar />
+    
       <FileUpload />
       <Inputs />
       <GenerateButtons />
