@@ -19,7 +19,7 @@ const Inputs = () => {
           </select>
         </div>
       </div>{" "}
-      <div className="w-[90%] mx-auto my-3 rounded-lg  px-2 py-4 border bg-[#202020]">
+      <div className="w-[90%] mx-auto my-3 rounded-lg  px-2 py-4  bg-[#202020]">
         <input
           type="text"
           className="w-full h-full"
