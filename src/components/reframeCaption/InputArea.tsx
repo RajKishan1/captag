@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowUp } from "react-icons/fa6";
+import { SiCodemagic } from "react-icons/si";
 const InputArea = () => {
   return (
     <div className="w-[95%] h-32 my-5 mx-auto rounded-lg backdrop-blur-2xl border border-neutral-600">
@@ -27,7 +27,7 @@ const InputArea = () => {
             href="#"
             className="size-9 ml-6 rounded-full bg-[#202020] flex items-center justify-center border border-neutral-500 text-sm"
           >
-            <FaArrowUp color="white" size={16} className="bg-red" />
+            <SiCodemagic color="white" size={16} className="bg-red" />
           </a>
         </div>
       </div>

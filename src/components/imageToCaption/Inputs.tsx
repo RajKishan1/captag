@@ -1,6 +1,6 @@
 import React from "react";
 
-const Inputs = () => {
+const Inputs = (value: string) => {
   return (
     <div>
       <div className="w-full flex items-center  justify-evenly gap-2 px-2  py-4">
@@ -24,6 +24,7 @@ const Inputs = () => {
           type="text"
           className="w-full h-full"
           placeholder="Custom Keywords (Optional)"
+          value={value}
         />
       </div>
     </div>
