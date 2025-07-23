@@ -1,6 +1,9 @@
 import React from "react";
-
-const Inputs = (value: string) => {
+interface prop {
+  value: string;
+  setValue: (value: string) => void;
+}
+const Inputs = ({ value, setValue }: prop) => {
   return (
     <div>
       <div className="w-full flex items-center  justify-evenly gap-2 px-2  py-4">

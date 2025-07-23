@@ -4,7 +4,7 @@ import { FileUpload } from "../../components/imageToCaption/FileUpload";
 import Inputs from "../../components/imageToCaption/Inputs";
 import GenerateButtons from "@/components/imageToCaption/GenerateButtons";
 const page = () => {
-  const [value, setValue] = useState<string>();
+  const [value, setValue] = useState<string>("");
   return (
     <div className="">
       <FileUpload />

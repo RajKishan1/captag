@@ -15,14 +15,14 @@ const NavigationBar = () => {
       <div onClick={() => click()} className=" relative">
         <GiHamburgerMenu size={20} />
         <div
-          className={` ${visible} z-[100] w-[300px] mx-auto h-40 bg-red-500`}
+          className={` ${visible} z-[1000] w-[300px] mx-auto h-40 bg-red-500`}
         >
           <a href="/captionGenerator">
             {" "}
             <div>Caption Generator</div>
           </a>
           <div>Reframe Text</div>
-        </div>
+        </div>  
       </div>
     </div>
   );
