@@ -22,7 +22,7 @@ const Inputs = (value: string) => {
       <div className="w-[80%] mx-auto my-3 rounded-lg  px-2 py-4  bg-[#202020]">
         <input
           type="text"
-          className="w-full h-full"
+          className="w-full h-full "
           placeholder="Custom Keywords (Optional)"
           value={value}
         />

@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { FileUpload } from "../../components/imageToCaption/FileUpload";
 import Inputs from "../../components/imageToCaption/Inputs";
@@ -7,7 +8,7 @@ const page = () => {
   return (
     <div className="">
       <FileUpload />
-      <Inputs value={value} />
+      <Inputs value={value} setValue={setValue} />
       <GenerateButtons />
     </div>
   );
