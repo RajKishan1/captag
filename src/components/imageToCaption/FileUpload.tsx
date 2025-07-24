@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { cn } from "@/lib/utils";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { IconUpload } from "@tabler/icons-react";
 import { useDropzone } from "react-dropzone";
@@ -51,7 +51,9 @@ export const FileUpload = ({
       console.log(error);
     },
   });
-
+  useEffect(() => {
+    console.log(files);
+  }, [files]);
   return (
     <div className="w-full -z-10" {...getRootProps()}>
       <motion.div
@@ -74,7 +76,7 @@ export const FileUpload = ({
             Upload file
           </p>
           <p className="relative font-sans font-normal text-neutral-400 dark:text-neutral-400 text-base mt-2">
-          Upload your file to generate captions .
+            Upload your file to generate captions .
           </p>
           <div className="relative w-full mt-10 max-w-xl mx-auto">
             {files.length > 0 &&
@@ -116,14 +118,14 @@ export const FileUpload = ({
                       {file.type}
                     </motion.p>
 
-                    <motion.p
+                    {/* <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       layout
                     >
                       modified{" "}
                       {new Date(file.lastModified).toLocaleDateString()}
-                    </motion.p>
+                    </motion.p> */}
                   </div>
                 </motion.div>
               ))}
