@@ -14,7 +14,7 @@ const page = () => {
   }, [value]);
 
   return (
-    <div className="">
+    <div className=" max-w-[1200px] mx-auto">
       <FileUpload />
       <Inputs
         platform={platform}

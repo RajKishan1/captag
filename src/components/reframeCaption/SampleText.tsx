@@ -6,7 +6,7 @@ interface prop {
 }
 export const Text = ({ text }: { text: string }) => {
   return (
-    <div className="flex justify-between items-center bg-gradient-to-br from-neutral-950 to-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 ">
+    <div className="max-w-[500px] flex justify-between items-center bg-gradient-to-br from-neutral-950 to-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 ">
       <p>{text}</p>
       <div>
         <MdArrowOutward size={20} />
@@ -15,7 +15,7 @@ export const Text = ({ text }: { text: string }) => {
   );
 };
 const SampleText = ({ text, setText }: prop) => {
-  const text1 = "qwe qwe qwe qwe qwe ";
+  const text1 = "I'm feeling awesome today!";
   const text2 = "qwe wer wer rty qwe ";
   const text3 = "qwe qwe wew qwe sdd ";
   return (
