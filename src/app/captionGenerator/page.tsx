@@ -7,9 +7,12 @@ const page = () => {
   const [value, setValue] = useState<string>("");
   const [platform, setPlatform] = useState<string>("");
   const [mood, setMood] = useState<string>("");
+  const [files, setFiles] = useState<string>("");
+
   useEffect(() => {
     console.log(value, platform, mood);
-  },[value]);
+  }, [value]);
+
   return (
     <div className="">
       <FileUpload />
