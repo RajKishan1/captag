@@ -9,7 +9,8 @@ const Page = () => {
   const [text, setText] = useState<string>("");
   const [usermood, setUsermood] = useState<string>("");
   const [socialPlatform, setSocialPlatform] = useState<string>("");
-  const [result, setResult] = useState<string>("Zca");
+  const [result, setResult] = useState<string>("");
+  const [visible, setVisible] = useState<string>("hidden");
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -18,13 +19,13 @@ const Page = () => {
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
-      }, 3000);
+      }, 4000);
     } catch (err) {
       console.error("Failed to copy", err);
     }
   };
   return (
-    <div className="h-screen max-w-[1200px] mx-auto flex flex-col gap-4">
+    <div className="h-screen max-w-[1200px] mx-auto flex flex-col  gap-4">
       <h1 className="text-xl font-semibold mx-auto text-center my-4 mt-8">
         Refine your Captions and Tweets
       </h1>
@@ -36,9 +37,10 @@ const Page = () => {
         setUsermood={setUsermood}
         socialPlatform={socialPlatform}
         setSocialPlatform={setSocialPlatform}
+        setVisible={setVisible}
       />
 
-      <div className="w-full p-2 ">
+      <div className={`w-full p-2 ${visible}`}>
         <div className="bg-neutral-900 rounded-lg border border-neutral-700 p-2">
           <div>
             {" "}
@@ -49,7 +51,7 @@ const Page = () => {
               onClick={handleCopy}
               className="text-xs px-3 py-2 border border-neutral-700 rounded-lg bg-neutral-900"
             >
-              {!copied ? <FaCopy /> : <IoMdDoneAll />}
+              {!copied ? <FaCopy /> : <IoMdDoneAll color="green" size={14} />}
             </button>
           </div>
         </div>

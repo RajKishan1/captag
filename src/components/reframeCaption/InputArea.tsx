@@ -8,6 +8,7 @@ interface InputAreaProps {
   setUsermood: (value: string) => void;
   socialPlatform: string;
   setSocialPlatform: (value: string) => void;
+  setVisible: (value: string) => void;
 }
 
 const InputArea = ({
@@ -17,6 +18,7 @@ const InputArea = ({
   setUsermood,
   socialPlatform,
   setSocialPlatform,
+  setVisible,
 }: InputAreaProps) => {
   const selectWrapperClass =
     "text-white text-xs bg-[#202020] px-2 py-2 rounded-lg border border-neutral-700";
@@ -75,6 +77,7 @@ const InputArea = ({
           className="size-9 ml-4 rounded-full bg-[#202020] flex items-center justify-center border border-neutral-500 text-sm hover:scale-105"
           onClick={() => {
             console.log(usermood, text, socialPlatform);
+            setVisible("block");
           }}
         >
           <SiCodemagic color="white" size={16} />
