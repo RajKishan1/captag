@@ -45,7 +45,7 @@ const InputArea = ({
           <div className={selectWrapperClass}>
             <select
               value={socialPlatform}
-              onChange={(e) => setUsermood(e.target.value)}
+              onChange={(e) => setSocialPlatform(e.target.value)}
               className={selectInputClass}
             >
               <option>Instagram</option>
@@ -61,7 +61,7 @@ const InputArea = ({
           <div className={selectWrapperClass}>
             <select
               value={usermood}
-              onChange={(e) => setSocialPlatform(e.target.value)}
+              onChange={(e) => setUsermood(e.target.value)}
               className={selectInputClass}
             >
               <option>Happy😊</option>
