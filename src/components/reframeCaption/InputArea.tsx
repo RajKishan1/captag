@@ -9,6 +9,7 @@ interface InputAreaProps {
   socialPlatform: string;
   setSocialPlatform: (value: string) => void;
   setVisible: (value: string) => void;
+  handleSubmit: (value: any) => any;
 }
 
 const InputArea = ({
@@ -19,6 +20,7 @@ const InputArea = ({
   socialPlatform,
   setSocialPlatform,
   setVisible,
+  handleSubmit,
 }: InputAreaProps) => {
   const selectWrapperClass =
     "text-white text-xs bg-[#202020] px-2 py-2 rounded-lg border border-neutral-700";
@@ -26,7 +28,10 @@ const InputArea = ({
   const selectInputClass = "bg-neutral-800 text-white outline-none";
 
   return (
-    <div className="w-[95%] h-32  mx-auto rounded-lg backdrop-blur-2xl border border-neutral-700">
+    <form
+      onSubmit={handleSubmit}
+      className="w-[95%] h-32  mx-auto rounded-lg backdrop-blur-2xl border border-neutral-700"
+    >
       <input
         value={text}
         onChange={(e) => setText(e.target.value)}
@@ -39,7 +44,7 @@ const InputArea = ({
         <div className="flex items-center justify-around gap-2">
           <div className={selectWrapperClass}>
             <select
-              value={usermood}
+              value={socialPlatform}
               onChange={(e) => setUsermood(e.target.value)}
               className={selectInputClass}
             >
@@ -55,7 +60,7 @@ const InputArea = ({
           {/* Mood Selector */}
           <div className={selectWrapperClass}>
             <select
-              value={socialPlatform}
+              value={usermood}
               onChange={(e) => setSocialPlatform(e.target.value)}
               className={selectInputClass}
             >
@@ -72,8 +77,8 @@ const InputArea = ({
         </div>
 
         {/* Magic Button */}
-        <a
-          href="#"
+        <button
+          type="submit"
           className="size-9 ml-4 rounded-full bg-[#202020] flex items-center justify-center border border-neutral-500 text-sm hover:scale-105"
           onClick={() => {
             console.log(usermood, text, socialPlatform);
@@ -81,9 +86,9 @@ const InputArea = ({
           }}
         >
           <SiCodemagic color="white" size={16} />
-        </a>
+        </button>
       </div>
-    </div>
+    </form>
   );
 };
 

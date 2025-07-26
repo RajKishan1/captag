@@ -16,8 +16,8 @@ export const Text = ({ text }: { text: string }) => {
 };
 const SampleText = ({ text, setText }: prop) => {
   const text1 = "I'm feeling awesome today!";
-  const text2 = "qwe wer wer rty qwe ";
-  const text3 = "qwe qwe wew qwe sdd ";
+  const text2 = "Today's match was awesome!!";
+  const text3 = "The AI era is here.";
   return (
     <div className="w-full h-auto p-2 flex flex-col gap-3">
       <div
